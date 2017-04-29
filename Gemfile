@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 
+gem 'faraday'
 gem 'puma'
 gem 'sinatra'
 gem 'sinatra-contrib'
