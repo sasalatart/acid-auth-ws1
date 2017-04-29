@@ -1,0 +1,17 @@
+<div class="full-height center-vertical">
+  <h1>Login</h1>
+
+  <% form_tag '/login' do %>
+    <div class="form-group col-sm-4 col-sm-offset-4">
+      <%= label_tag 'email', for: :email %>
+      <%= input_tag :text, id: :email, name: :email, class: 'form-control' %>
+    </div>
+
+    <div class="form-group col-sm-4 col-sm-offset-4">
+      <%= label_tag 'imagen', for: :image %>
+      <%= input_tag :file, id: :image, name: :image, class: 'btn btn-sm btn-default' %>
+    </div>
+
+    <%= submit_tag 'Iniciar sesión', class: 'col-sm-4 col-sm-offset-4 btn btn-primary' %>
+  <% end %>
+</div>

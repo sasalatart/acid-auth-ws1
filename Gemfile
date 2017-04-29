@@ -1,7 +1,8 @@
 source 'https://rubygems.org'
 
+gem 'puma'
 gem 'sinatra'
-gem 'thin'
+gem 'sinatra_more'
 
 group :development do
   gem 'shotgun'
