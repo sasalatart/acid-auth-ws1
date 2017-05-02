@@ -16,6 +16,9 @@
       <%= input_tag :file, name: :image, id: :image_input, class: 'btn btn-sm btn-default' %>
     </div>
 
-    <%= submit_tag 'Iniciar sesión', class: 'col-sm-4 col-sm-offset-4 btn btn-primary', disabled: true %>
+    <button type="submit" class="col-sm-4 col-sm-offset-4 ladda-button" disabled
+            data-style="expand-right" data-color="blue" data-size="l">
+      <span class="ladda-label">Iniciar Sesión</span>
+    </button>
   <% end %>
 </div>
