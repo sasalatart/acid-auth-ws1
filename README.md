@@ -16,7 +16,7 @@ In this case, given the simplicity of the application, developing it in Sinatra 
 
 ## API
 
-##### Login
+#### Login
 
 Forwards the user's login request to **WS2**.
 
@@ -57,13 +57,13 @@ Forwards the user's login request to **WS2**.
       data: { email: 'an-email', image: 'base64-image' }
     }).done(function(response) {
       console.log(response);
-    }).fail(function() {
+    }).fail(function(response) {
       console.log(response);
     });
   });
   ```
 
-##### Other requests
+#### Other requests
 
 Any other `GET` request will respond with the view through which users can log in.
 
