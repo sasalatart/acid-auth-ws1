@@ -1,4 +1,5 @@
 require 'faraday'
+require 'json'
 
 module WS2Connection
   def self.authenticate(email, base64_image, user_agent)
@@ -11,6 +12,6 @@ module WS2Connection
 
     response = conn.post "/users/verify/#{email}", image: base64_image
 
-    { status: response.status, message: response.body['message'] }
+    { status: response.status, message: JSON.parse(response.body)['message'] }
   end
 end
