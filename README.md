@@ -20,17 +20,13 @@ In this case, given the simplicity of the application, developing it in Sinatra 
 
 Forwards the user's login request to **WS2**.
 
-- **URL:**
-
-  `POST /login`
+- **URL:** `POST /login`
 
 - **Data Params**
-
   - **email**: The user's email.
   - **image**: The user's base64 encoded image.
 
 - **Success Response:**
-
   - **Status:** 200
   - **Example content:**
   ```javascript
@@ -40,7 +36,6 @@ Forwards the user's login request to **WS2**.
   ```
 
 - **Error Response:**
-
   - **Status:** 401
   - **Content:**
   ```javascript
@@ -53,14 +48,13 @@ Forwards the user's login request to **WS2**.
 
   ```javascript
     $.post({
-      url: '/login',
+      url: 'application-host/login',
       data: { email: 'an-email', image: 'base64-image' }
     }).done(function(response) {
       console.log(response);
     }).fail(function(response) {
       console.log(response);
     });
-  });
   ```
 
 #### Other requests
