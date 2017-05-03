@@ -10,7 +10,7 @@ module WS2Connection
     end
     conn.headers[:user_agent] = user_agent
 
-    response = conn.post "/users/verify/#{email}", image: base64_image
+    response = conn.post "/verify_user/#{email}", image: base64_image
 
     { status: response.status, message: JSON.parse(response.body)['message'] }
   end
