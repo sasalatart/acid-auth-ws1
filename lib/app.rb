@@ -7,7 +7,10 @@ require_relative './services/ws2_connection'
 register SinatraMore::MarkupPlugin
 
 post '/login' do
-  response = WS2Connection.authenticate(params[:email], params[:image])
+  response = WS2Connection.authenticate(params[:email],
+                                        params[:image],
+                                        request.user_agent)
+
   status response[:status]
   json message: response[:message]
 end
